@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vibe Coding - สมัครเรียน</title>
+<!-- Google Fonts สำหรับดีไซน์ทันสมัย -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* พื้นฐาน */
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+  }
+
+  /* หัวเว็บ */
+  header {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  /* คอนเทนเนอร์หลัก */
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  /* ส่วนข้อมูลส่วนตัว */
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .profile-info {
+    flex: 1 1 300px;
+  }
+  .profile-info h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  .profile-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  /* ฟอร์มสมัคร */
+  .apply-form {
+    margin-top: 50px;
+  }
+  .apply-form h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  input, select, textarea {
+    margin-top: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 15px #ff0000; /* แสงสีแดงเข้ม */
+  }
+  /* ปุ่ม */
+  button {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #4CAF50; /* สีเขียวตอนปกติ */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  button:hover {
+    background-color: #2196F3;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff inset;
+  }
+
+  /* สไตล์สำหรับข้อความแจ้งเตือน */
+  .thank-you {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color:  #2196F3;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media(max-width: 768px) {
+    .profile {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Vibe Coding</h1>
+  <p>สมัครเรียน แล้วร่วมสร้างสรรค์ไปด้วยกัน</p>
+</header>
+
+<div class="container">
+
+  <!-- ข้อมูลส่วนตัวและประวัติ -->
+  <section class="profile">
+    <div class="profile-info">
+      <h2>ประวัติส่วนตัว</h2>
+      <p><strong>ชื่อ:</strong> นางสาวกฤษณา ผลขาว</p>
+      <p><strong>อายุ:</strong> 22 ปี</p>
+      <p><strong>เบอร์โทร:</strong> 065890****</p>
+      <p><strong>อีเมล:</strong> kritsa****69@gmail.com</p>
+      <p><strong>ที่อยู่:</strong> ต.หนองญาติ อ.เมือง จ.นครพนม</p>
+    </div>
+    <div class="profile-info">
+      <h2>ประวัติการศึกษา</h2>
+      <ul>
+        <li>มัธยมต้น โรงเรียนบ้านเหล่าภูมีคำธาตุ (256X-256X)</li>
+        <li>ประกาศนียบัตรวิชาชีพ สาขาคอมพิวเตอร์ธุรกิจ วิทยาลัยเทคนครพนม (256X-256X)</li>
+        <li>ประกาศนียบัตรวิชาชีพชั้นสูง สาขาเทคโนโลยีธุรกิจดิจิทัล มหาวิทยาลัยนครพนม (256X-256X)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- แบบฟอร์มสมัครเรียน -->
+  <section class="apply-form">
+    <h2>สมัครเรียนกันจร้าเด็กกระโปก</h2>
+    <form id="registerForm">
+      <label for="name">ชื่อ-นามสกุล</label>
+      <input type="text" id="name" name="name" placeholder="กรอกชื่อ-นามสกุล" required />
+
+      <label for="dob">วันเกิด</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="phone">เบอร์โทรศัพท์</label>
+      <input type="tel" id="phone" name="phone" placeholder="เช่น 098-XXX-XXXX" required />
+
+      <label for="email">อีเมล</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+      <label for="program">หลักสูตรที่สนใจ</label>
+      <select id="program" name="program" required>
+        <option value="">เลือกหลักสูตร</option>
+        <option value="web_development">พัฒนาเว็บไซต์</option>
+        <option value="graphic_design">ออกแบบกราฟิก</option>
+        <option value="programming">เขียนโปรแกรม</option>
+      </select>
+
+      <label for="message">ข้อความเพิ่มเติม</label>
+      <textarea id="message" name="message" rows="4" placeholder="เขียนข้อความเพิ่มเติม..."></textarea>
+
+      <button type="submit">ส่งใบสมัคร</button>
+    </form>
+    <div class="thank-you" id="thankYouMessage" style="display:none;">ขอบคุณสำหรับการสมัคร! เราจะติดต่อกลับเร็ว ๆ นี้.</div>
+  </section>
+
+</div>
+
+<script>
+  // เมื่อกด Submit ฟอร์ม
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // แสดงข้อความขอบคุณ
+    document.getElementById('thankYouMessage').style.display = 'block';
+    // รีเซ็ตฟอร์ม
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
